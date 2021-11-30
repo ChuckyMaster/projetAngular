@@ -16,6 +16,13 @@ export class AppComponent {
     'life is full of breads',
     new Date('1542/02/12')
   );
+  lolo = new Personne(
+    'lolo',
+    'Dudu',
+    50,
+    'life is full of breads',
+    new Date('1542/02/12')
+  );
 
   tabPersonne: Personne[] = [];
 
@@ -24,6 +31,7 @@ export class AppComponent {
   constructor() {
     this.tabPersonne.push(this.jack);
     this.tabPersonne.push(this.franck);
+    this.tabPersonne.push(this.lolo);
 
     for (const property of this.tabPersonne) {
       let li: HTMLElement = document.createElement('li');

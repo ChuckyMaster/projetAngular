@@ -5,16 +5,34 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* background-color: black; */
 }
 
 div {
   display: flex;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
   border: 1px solid purple;
+  background-color: rgb(201, 17, 176);
   width: 300px;
   padding: 1rem;
+  color: white;
+  margin: 1rem;
 }
 
-ul,
+ul {
+  margin: 1rem;
+}
 li {
   list-style: none;
+}
+button {
+  margin: 0.5rem auto;
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0.5rem;
+  background-color: black;
+  color: rgb(255, 80, 232);
+  cursor: pointer;
 }

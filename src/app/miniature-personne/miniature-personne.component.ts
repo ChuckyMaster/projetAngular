@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Personne } from '../personne';
 
 @Component({
@@ -6,8 +7,15 @@ import { Personne } from '../personne';
   templateUrl: './miniature-personne.component.html',
   styleUrls: ['./miniature-personne.component.css'],
 })
-export class MiniaturePersonneComponent implements OnInit {
-  constructor() {}
+export class MiniaturePersonneComponent {
+  ppl: Personne[] = [];
 
-  ngOnInit(): void {}
+  @Input() public kkun!: Personne;
+  @Output() delete = new EventEmitter<void>();
+  addPersonn() {}
+  deletPersonn() {
+    this.delete.emit();
+    console.log('HELLO FROM DELETE BUTTON');
+  }
+  constructor() {}
 }

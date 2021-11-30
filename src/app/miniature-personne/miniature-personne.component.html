@@ -1,13 +1,13 @@
-<p>miniature-personne works!</p>
-
 <div>
-  <h2>Nom Prenom</h2>
+  <h2>{{ kkun.nomComplet }}</h2>
 
   <ul>
-    <!-- <li>Nom</li>
-    <li>Prenom</li>
-    <li>age</li>
-    <li>Philo</li>
-    <li>Date Naissance</li> -->
+    <li>{{ kkun.nom }}</li>
+    <li>{{ kkun.prenom }}</li>
+    <li>{{ kkun.age }}</li>
+    <li>{{ kkun.philososhie }}</li>
+    <li>{{ kkun.dateNaissance }}</li>
+    <li *ngIf="kkun.age"></li>
+    <button (click)="deletPersonn()">Remove</button>
   </ul>
 </div>
