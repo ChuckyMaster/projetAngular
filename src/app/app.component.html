@@ -1,11 +1,18 @@
 <!-- <h1 *ngFor="let p of tabPersonne">Hello {{ p.nomComplet }}</h1> -->
-<h1>Liste de personnes ennuyante</h1>
 
-<app-miniature-personne
-  [kkun]="p"
-  *ngFor="let p of tabPersonne"
-  (delete)="deletePersonn(p)"
->
-  <!-- Delete a gauche = nom de l'event sur min-app / nom de la variable ouptup , à droite c'st le nom de la fonction sur app-comp ts
-(addevent) -->
-</app-miniature-personne>
+<div class="container">
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="./homepage" routerLinkActive="Active"> Homepage</a>
+      </li>
+      <li><a routerLink="/users" routerLinkActive="Active"> Users</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div>
+  <!-- <app-homepage></app-homepage>
+  <app-users></app-users> -->
+  <router-outlet></router-outlet>
+</div>

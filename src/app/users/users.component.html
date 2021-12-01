@@ -1,0 +1,16 @@
+<p>users works!</p>
+
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+
+<h1>Liste de personnes ennuyante</h1>
+
+<app-miniature-personne
+  [kkun]="p"
+  *ngFor="let p of tabPersonne"
+  (delete)="deletePersonn(p)"
+>
+</app-miniature-personne>
