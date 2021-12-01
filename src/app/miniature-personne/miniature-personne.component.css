@@ -36,3 +36,11 @@ button {
   color: rgb(255, 80, 232);
   cursor: pointer;
 }
+
+.mineur {
+  color: red;
+}
+
+.majeur {
+  color: green;
+}

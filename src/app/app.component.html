@@ -4,6 +4,8 @@
 <app-miniature-personne
   [kkun]="p"
   *ngFor="let p of tabPersonne"
-  (deletPersonn)="(p)"
+  (delete)="deletePersonn(p)"
 >
+  <!-- Delete a gauche = nom de l'event sur min-app / nom de la variable ouptup , à droite c'st le nom de la fonction sur app-comp ts
+(addevent) -->
 </app-miniature-personne>

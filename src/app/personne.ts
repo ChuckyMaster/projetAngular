@@ -1,32 +1,35 @@
 export class Personne {
-  nom: string;
   prenom: string;
-  age: number;
-  philososhie: string;
+  nom: string;
   dateNaissance: Date;
   nomComplet: string;
+  majeur: boolean;
 
-  constructor(
-    nom: string,
-    prenom: string,
-    age: number,
-    philosophie: string,
-    dateNaissance: Date
-  ) {
-    this.nom = nom;
+  constructor(prenom: string, nom: string, dateNaissance: Date) {
     this.prenom = prenom;
-    this.age = age;
-    this.philososhie = philosophie;
+    this.nom = nom;
     this.dateNaissance = dateNaissance;
+    this.nomComplet = `${prenom} ${nom}`;
 
-    this.nomComplet = `${nom} - ${prenom}`;
+    let age = this.getAge();
+
+    if (age > 18) {
+      this.majeur = true;
+    } else {
+      this.majeur = false;
+    }
+    //Syntaxe plus rapide
+    // age > 18 ? this.majeur = true : this.majeur = false;
+  }
+
+  getAge() {
+    var today = new Date();
+    var birthDate = this.dateNaissance;
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
   }
 }
-
-let personne1 = new Personne(
-  'Chap',
-  'Marie',
-  15,
-  'me faites pas chié',
-  new Date('1989/01/02')
-);

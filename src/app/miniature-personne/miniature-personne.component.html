@@ -4,10 +4,13 @@
   <ul>
     <li>{{ kkun.nom }}</li>
     <li>{{ kkun.prenom }}</li>
-    <li>{{ kkun.age }}</li>
-    <li>{{ kkun.philososhie }}</li>
-    <li>{{ kkun.dateNaissance }}</li>
+
+    <li>{{ kkun.dateNaissance | date: "shortDate" }}</li>
     <li *ngIf="kkun.age"></li>
+
+    <p class="majeur" *ngif="kkun.majeur">{{ kkun.prenom }} est majeur</p>
+    <p class="mineur" *ngif="kkun.majeur">{{ kkun.prenom }} est mineur</p>
+
     <button (click)="deletPersonn()">Remove</button>
   </ul>
 </div>

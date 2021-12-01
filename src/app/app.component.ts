@@ -8,19 +8,17 @@ import { Personne } from './personne';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  jack = new Personne('jojo', 'jaja', 15, 'omg sushi', new Date('1852/05/02'));
+  jack = new Personne('jojo', 'jaja', new Date('1852/05/02'));
   franck = new Personne(
     'Frankette',
     'Bobo',
-    50,
-    'life is full of breads',
+
     new Date('1542/02/12')
   );
   lolo = new Personne(
     'lolo',
     'Dudu',
-    50,
-    'life is full of breads',
+
     new Date('1542/02/12')
   );
 
@@ -33,10 +31,11 @@ export class AppComponent {
     this.tabPersonne.push(this.franck);
     this.tabPersonne.push(this.lolo);
 
-    for (const property of this.tabPersonne) {
-      let li: HTMLElement = document.createElement('li');
-      li.innerHTML = `${this.tabPersonne}`;
-    }
+    // for (const property of this.tabPersonne) {
+    //   let li: HTMLElement = document.createElement('li');
+    //   li.innerHTML = `${this.tabPersonne}`;
+    // }
+
     // setTimeout(() => {
     //   this.tabPrenom.push('Toto');
     // }, 2000);
@@ -48,5 +47,10 @@ export class AppComponent {
     //     this.tabPrenom = prenom;
     //   }, (nbSeconde += 2000));
     // }
+  }
+
+  deletePersonn(toto: Personne) {
+    let index = this.tabPersonne.indexOf(toto);
+    this.tabPersonne.splice(index, 1);
   }
 }
