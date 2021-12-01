@@ -6,7 +6,7 @@
     <li>{{ kkun.prenom }}</li>
 
     <li>{{ kkun.dateNaissance | date: "shortDate" }}</li>
-    <li *ngIf="kkun.age"></li>
+    <li *ngIf="kkun.dateNaissance"></li>
 
     <p class="majeur" *ngif="kkun.majeur">{{ kkun.prenom }} est majeur</p>
     <p class="mineur" *ngif="kkun.majeur">{{ kkun.prenom }} est mineur</p>
