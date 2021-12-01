@@ -9,7 +9,7 @@
     <li *ngIf="kkun.dateNaissance"></li>
 
     <p class="majeur" *ngif="kkun.majeur">{{ kkun.prenom }} est majeur</p>
-    <p class="mineur" *ngif="kkun.majeur">{{ kkun.prenom }} est mineur</p>
+    <p class="mineur" *ngif="!kkun.majeur">{{ kkun.prenom }} est mineur</p>
 
     <button (click)="deletPersonn()">Remove</button>
   </ul>
